@@ -1,0 +1,140 @@
+    /* main content */
+    main {
+      min-height: 70vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    /* Youtube Section */
+    .youtube-section {
+      background-color: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 24px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+    }
+
+    .youtube-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .youtube-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 24px;
+      background: white;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Coding Section */
+    .code-section {
+      background-color: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 24px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+    }
+
+    .code-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .code-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 24px;
+      background: white;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .thumbnail {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #777;
+      line-height: 1.4;
+      font-weight: 600;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+
+    .project-info {
+      vertical-align: top;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    /* Coming Soon Section */
+    .soon-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      margin: auto;
+      color: #222;
+    }
+
+    .soon-section {
+      background-color: #fffbeb;
+      border: 2px solid #f59e0b;
+      padding: 24px;
+      border-radius: 8px;
+      margin-bottom: 50px;
+    }
+
+    .soon-section .soon-title {
+      color: #92400e;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+    
+    .icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+      object-fit: contain;
+    }
