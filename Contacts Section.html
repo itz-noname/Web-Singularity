@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Web Singularity - CONTACTS</title>
+  <link rel="icon" type="image/x-icon" href="./INDEX IMG/Web-Logo.ico">
+  <link rel="stylesheet" href="Header&Footer.css">
+  <link rel="stylesheet" href="./CONTACTS SECTION/CONTACTS.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="./HEADER&FOOTER IMG/Web-Logo.png" alt="Web Logo" class="logo">
+      <div class="logo-text">
+        <strong>WEB SINGULARITY</strong><br>
+        <em>Titus Jariel</em>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <ul>
+        <li><a href="INDEX.html">Home</a></li>
+
+        <li><a href="Projects Section.html">Projects</a></li>
+
+        <li><a href="Contacts Section.html">Contacts</a></li>
+
+        <li><a href="Resume Section.html">Resume</a></li>
+
+        <li class="dropdown">
+          <a href="#">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="About Me.html">About Me</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Grid -->
+  <div class="contact-container">
+    <div class="contact-title">Contact Me</div>
+    <div class="contact-subtitle">
+      I'm here for your feedback and concerns
+    </div>
+    <div class="contact-cards-title">Get in Touch</div>
+    <div class="contact-grid">
+
+      <!-- Contact Number -->
+      <div class="contact-card">
+        <div class="contact-icon-wrapper">
+          <img src="./CONTACTS SECTION/Phone icon.png" width="28" height="28" alt="Phone Contact">
+        </div>
+        <div>
+          <div class="contact-main">Contact Number</div>
+          <div class="contact-detail">(+63) 976 677 6829</div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-card icon-bl">
+        <div class="contact-icon-wrapper">
+          <img src="./CONTACTS SECTION/Mail.png" width="32" height="32" alt="Email Mail">
+        </div>
+        <div>
+          <div class="contact-main">Email</div>
+          <div class="contact-detail">titusjariel@gmail.com</div>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="contact-card">
+        <div class="contact-icon-wrapper">
+          <img src="./CONTACTS SECTION/Address icon.png" width="28" height="28" alt="Address">
+        </div>
+        <div>
+          <div class="contact-main">Address</div>
+          <div class="contact-detail">Dasma 3, Salawag<br>Dasmariñas City, Cavite</div>
+        </div>
+      </div>
+
+      <!-- Facebook -->
+      <div class="contact-card icon-fb">
+        <div class="contact-icon-wrapper">
+          <img src="./CONTACTS SECTION/FB Icon.png" alt="Facebook">
+        </div>
+        <div>
+          <div class="contact-main">Facebook</div>
+          <div class="contact-detail">Titus Jariel II</div>
+        </div>
+      </div>
+
+      <!-- Instagram -->
+      <div class="contact-card icon-ig">
+        <div class="contact-icon-wrapper" style="background:#d8f2e2;">
+          <img src="./CONTACTS SECTION/IG Icon.png" width="28" height="28" alt="Instagram">
+        </div>
+        <div>
+          <div class="contact-main">Instagram</div>
+          <div class="contact-detail">jjust_tituss</div>
+        </div>
+      </div>
+
+      <!-- Github -->
+      <div class="contact-card icon-gh">
+        <div class="contact-icon-wrapper">
+          <img src="./CONTACTS SECTION/Github Icon.png" alt="Github">
+        </div>
+        <div>
+          <div class="contact-main">Github</div>
+          <div class="contact-detail">itz-noname</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Form -->
+  <div class="contact-message-container">
+    <div class="form-title">Send Me a Message</div>
+    <form class="contact-form" action="https://sheetdb.io/api/v1/r69v4kv4dsdp9" method="POST" id="sheetdb-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" name="data[Name]" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Your email address" name="data[Email]" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input id="contact" type="text" placeholder="Your contact number" name="data[Contact Number]" />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" placeholder="What is this about?" name="data[Subject]" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group" style="width:100%;">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Your message" name="data[Message]" required></textarea>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="send-btn">
+          <svg viewBox="0 0 24 24">
+            <path d="M2 21l21-9-21-9v7l15 2-15 2z" />
+          </svg>
+          Send Message
+        </button>
+      </div>
+    </form>
+    
+    <!-- Javascript for the Message Form Using SheetDB API -->
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method : "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                alert('Thank You for Your Message!')
+                location.reload()
+            });
+        });
+    </script>
+  </div>
+
+  <footer>
+    <div class="footer-divider"></div>
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          <img src="./HEADER&FOOTER IMG/Web-Logo.png" alt="Web Logo">
+          <div class="footer-logo-text">
+            <strong>WEB SINGULARITY</strong><br>
+            <em>Titus Jariel</em>
+          </div>
+        </div>
+        <p>
+          A clear and direct central hub to demonstrate my abilities, tell my stories, and 
+          make a strong, lasting first impression.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="INDEX.html">Home</a></li>
+          <li><a href="Projects Section.html">Projects</a></li>
+          <li><a href="Contacts Section.html">Contacts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="Resume Section.html">Resume</a></li>
+          <li><a href="About Me.html">About Me</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h4>Contact Info</h4>
+        <p><img src="./HEADER&FOOTER IMG/Location-Icon.png" class="contact-icon">Dasma 3, Salawag, Dasmarinas City, Cavite</p>
+        <p><img src="./HEADER&FOOTER IMG/Small-Phone-Icon.png" class="contact-icon">0976 677 6829</p>
+        <p><img src="./HEADER&FOOTER IMG/E-mail-Icon.png" class="contact-icon">titusjariel@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+</html>
