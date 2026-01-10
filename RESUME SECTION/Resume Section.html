@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Untitled Resume</title>
+
+  <!--Poppins Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      color: #000;
+      background-color: #fff;
+    }
+
+    /* header */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    /* navigation sect */
+    .nav-links>ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      padding: 8px;
+      display: block;
+    }
+
+    .nav-links a:hover {
+      color: #20AFCB;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    /* dropdown menus */
+    .dropdown-menu,
+    .submenu {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 99;
+    }
+
+    /* dropdown show */
+    .dropdown:hover>.dropdown-menu,
+    .dropdown-menu li.dropdown:hover>.submenu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .dropdown-menu li,
+    .submenu li {
+      width: 100%;
+      list-style: none;
+      position: relative;
+    }
+
+    .dropdown-menu a,
+    .submenu a {
+      display: block;
+      width: 100%;
+      padding: 8px 16px;
+      color: #000;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .dropdown-menu a:hover,
+    .submenu a:hover {
+      background: #f0f0f0;
+      color: #20AFCB;
+    }
+
+    .submenu {
+      top: 0;
+      left: 100%;
+    }
+
+    /* chevron dropdown sign */
+    .dropdown>a::after {
+      content: "";
+      display: inline-block;
+      margin-left: 6px;
+      margin-bottom: 2px;
+      width: 6px;
+      height: 6px;
+      border-right: 1.5px solid #000;
+      border-bottom: 1.5px solid #000;
+      transform: rotate(45deg);
+      transition: transform 0.2s ease;
+      vertical-align: middle;
+    }
+
+    .dropdown:hover>a::after {
+      transform: rotate(225deg);
+    }
+
+    /* main placeholder */
+    main {
+      min-height: 70vh;
+    }
+
+    /* footer */
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding: 40px 80px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .footer-top .footer-logo {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .footer-top img {
+      height: 55px;
+    }
+
+    .footer-top .footer-logo-text {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    .footer-top p {
+      font-size: 13px;
+      margin-top: 10px;
+      color: #666;
+      max-width: 300px;
+    }
+
+    .footer-column h4 {
+      font-size: 15px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin: 6px 0;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #555;
+      font-size: 13px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+      color: #007bff;
+    }
+
+    .footer-contact p,
+    .footer-contact a {
+      font-size: 13px;
+      color: #555;
+      margin: 0;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-contact a:hover {
+      color: #20AFCB;
+    }
+
+    .footer-divider {
+      border-top: 1px solid #e0e0e0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .footer-bottom p {
+      margin: 3px 0;
+    }
+
+    .contact-icon {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      object-fit: contain;
+    }
+
+    /* for responsive using media queries */
+    @media (max-width: 900px) {
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 30px 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+        padding: 30px 30px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav-links>ul {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+
+    /* emergency report */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .input-group small {
+      color: gray;
+      margin-bottom: 5px;
+    }
+
+    .container input,
+    .container textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 100%;
+      height: 20px;
+    }
+
+    .container textarea {
+      height: 120px;
+      resize: none;
+    }
+
+
+    main h1 {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      display: block;
+      text-align: center;
+      margin-bottom: 60px;
+      color: gray;
+      line-height: 1.6;
+    }
+
+    main h3 {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .resume-section {
+      margin-top: 20px;
+    }
+
+    .resume-header {
+      max-width: 850px;
+      margin: 0 auto 10px auto;
+      padding-left: 20px;
+    }
+
+    .resume-title-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .resume-title-row h3 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .resume-icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    .map-sub {
+      display: block;
+      margin-top: 3px;
+      color: #555;
+    }
+
+    .sub-info {
+      display: block;
+      text-align: center;
+      font-style: italic;
+      color: gray;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .resume-container {
+      text-align: center;
+      margin: 20px auto;
+      max-width: 850px;
+    }
+
+    .resume-container img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-style {
+      display: block;
+      color: gray;
+      line-height: 1.7;
+      text-align: center;
+      margin: 25px auto;
+      max-width: 850px;
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    .file-btn {
+      /* This margin-top: auto pushes the button to the bottom */
+      margin-top: auto;
+      align-self: flex-start;
+      /* Keeps button size natural, not full width */
+
+      background: #007bff;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .file-btn:hover {
+      background: #f97316;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!--  Header  -->
+  <header class="navbar">
+    <nav class="nav-links">
+      <ul>
+        <li><a href="../HOME SECTION/Home Section.html">Home</a></li>
+
+        <li><a href="../PROJECTS SECTION/Projects Section.html">Projects</a></li>
+
+        <li><a href="../CONTACTS SECTION/Contacts Section.html">Contacts</a></li>
+
+        <li><a href="../RESUME SECTION/Resume Section.html">Resume</a></li>
+
+        <li class="dropdown">
+          <a href="#">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="../ABOUT SECTION/About Me/About Me.html">About Me</a></li>
+            <li><a href="../ABOUT SECTION/FAQ/FAQ.html">FAQ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Resume</h1>
+    <small class="section-subtitle">
+      This is my updated and current resume. In here, you will find information about me in a single
+      <br>
+      document, such as my Educations, Work Experiences, some Knowledgable
+      <br>
+      Skills, and other Personal Informations.
+    </small>
+
+    <div class="resume-section">
+
+      <div class="resume-header">
+        <div class="resume-title-row">
+          <img src="Resume Icon.png" alt="Resume Icon" class="resume-icon">
+          <h3>Resume Picture</h3>
+        </div>
+
+        <small class="map-sub">
+          The file is downloadable at the bottom of the picture.
+        </small>
+      </div>
+
+    </div>
+
+
+    <div class="resume-container">
+      <img src="Current Resume.png" alt="GERARD TITUS VINCENT F. JARIEL Resume">
+    </div>
+
+    <small class="btn-style">
+      <a href="Current Resume.pdf" target="_blank" class="file-btn" 
+      style="text-decoration: none;">Downloadable File</a>
+    </small>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-divider"></div>
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">
+          <img src="LOGO-CDRMMO.jpg" alt="City Logo">
+          <div class="footer-logo-text">
+            <strong>General Trias City</strong><br>
+            <em>CDRRMO</em>
+          </div>
+        </div>
+        <p>
+          City Disaster Risk Reduction Management Office of General Trias City, Cavite.
+          Committed to keeping our community safe and prepared.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../HOME SECTION/Home Section.html">Home</a></li>
+          <li><a href="../PROJECTS SECTION/Projects Section.html">Projects</a></li>
+          <li><a href="../CONTACTS SECTION/Contacts Section.html">Contacts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="../RESUME SECTION/Resume Section.html">Resume</a></li>
+          <li><a href="../ABOUT SECTION/About Me/About Me.html">About Me</a></li>
+          <li><a href="../ABOUT SECTION/FAQ/FAQ.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h4>Contact Info</h4>
+        <p><img src="Location-Icon.png" class="contact-icon">Dasma 3, Salawag, Dasmarinas City, Cavite</p>
+        <p><img src="Small-Phone-Icon.png" class="contact-icon">0976 677 6829</p>
+        <p><img src="E-mail-Icon.png" class="contact-icon">titusjariel@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
