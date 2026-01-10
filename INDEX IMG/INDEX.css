@@ -37,32 +37,20 @@
       font-size: 1rem;
     }
 
-    .btn-primary {
-      background: #007BFF;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
 
-    .btn-primary:hover {
-      background: #0088cc;
-    }
-
-    /* News Section */
-    .news {
+    /* Main Section */
+    .home {
       background: #fff;
       padding: 60px 40px;
       text-align: left;
     }
 
-    .news-header {
+    .home-header {
       text-align: center;
       margin-bottom: 60px;
     }
 
-    .news-header .section-line {
+    .home-header .section-line {
       width: 100px;
       height: 4px;
       background-color: #007bff;
@@ -70,14 +58,14 @@
       border-radius: 2px;
     }
 
-    .news-header h2 {
+    .home-header h2 {
       font-size: 1.8rem;
       font-weight: 700;
       color: #111827;
     }
 
-    /* --- FIX START: NEWS CONTAINER --- */
-    .news-container {
+    /* --- FIX START: HOME CONTAINER --- */
+    .home-container {
       display: flex;
       justify-content: center;
       /* removed align-items: flex-start; so it stretches */
@@ -88,7 +76,7 @@
       padding: 0 10px;
     }
 
-    .news-left {
+    .home-left {
       flex: 1;
       min-width: 300px;
       display: flex;
@@ -97,7 +85,7 @@
       gap: 20px;
     }
 
-    .news-gallery {
+    .home-gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
@@ -106,7 +94,7 @@
       width: 100%;
     }
 
-    .news-gallery img {
+    .home-gallery img {
       width: 100%;
       /* Make images responsive */
       height: 200px;
@@ -114,7 +102,7 @@
       object-fit: cover;
     }
 
-    .news-right {
+    .home-right {
       flex: 1;
       min-width: 300px;
       max-width: 520px;
@@ -124,50 +112,31 @@
       justify-content: flex-start;
     }
 
-    .alert-tag {
+    .info-tag {
       display: inline-block;
       color: #e11d48;
       font-weight: 600;
       margin-bottom: 8px;
     }
 
-    .news-right h3 {
+    .home-right h3 {
       font-size: 1.4rem;
       font-weight: 700;
       color: #111827;
       margin: 10px 0;
     }
 
-    .news-right p {
+    .home-right p {
       color: #4b5563;
       font-size: 0.95rem;
       line-height: 1.6;
       margin-bottom: 20px;
     }
 
-    .btn-read-full {
-      /* This margin-top: auto pushes the button to the bottom */
-      margin-top: auto;
-      align-self: flex-start;
-      /* Keeps button size natural, not full width */
-
-      background: #007bff;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: 0.3s;
-      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-read-full:hover {
-      background: #f97316;
-    }
-
     /* --- FIX END --- */
 
-    /* Info Boxes */
-    .info-boxes {
+    /* Skills Boxes */
+    .skill-boxes {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
@@ -176,7 +145,7 @@
       padding: 20px;
     }
 
-    .info-box {
+    .skill-box {
       background: #fff;
       border-radius: 12px;
       border: 1px solid #e5e7eb;
@@ -188,12 +157,12 @@
       transition: all 0.3s ease;
     }
 
-    .info-box:hover {
+    .skill-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .info-btn {
+    .skill-btn {
       width: 48px;
       height: 48px;
       display: flex;
@@ -204,63 +173,63 @@
       box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .info-btn img {
+    .skill-btn img {
       width: 30px;
       height: 30px;
       object-fit: contain;
     }
 
-    .info-btn.orange {
+    .skill-btn.orange {
       background: #f97316;
     }
 
-    .info-btn.blue {
+    .skill-btn.blue {
       background: #2563eb;
     }
 
-    .info-btn.green {
+    .skill-btn.green {
       background: #10b981;
     }
 
-    .info-btn.teal {
+    .skill-btn.teal {
       background: #0d9488;
     }
 
-    .info-box h4 {
+    .skill-box h4 {
       font-size: 1.05rem;
       font-weight: 600;
       color: #111827;
       margin-bottom: 8px;
     }
 
-    .info-box p {
+    .skill-box p {
       font-size: 0.9rem;
       color: #6b7280;
       margin: 0;
     }
 
-    .info-box.orange {
+    .skill-box.orange {
       background-color: rgba(255, 123, 84, 0.1);
       border: 1px solid rgba(255, 123, 84, 1);
     }
 
-    .info-box.blue {
+    .skill-box.blue {
       background-color: rgba(52, 152, 219, 0.1);
       border: 1px solid rgba(52, 152, 219, 1);
     }
 
-    .info-box.green {
+    .skill-box.green {
       background-color: rgba(46, 204, 113, 0.1);
       border: 1px solid rgba(46, 204, 113, 1);
     }
 
-    .info-box.teal {
+    .skill-box.teal {
       background-color: rgba(26, 188, 156, 0.1);
       border: 1px solid rgba(26, 188, 156, 1);
     }
 
-    /* Emergency */
-    .emergency {
+    /* Reminder */
+    .reminder {
       background: #007bff;
       color: white;
       text-align: center;
@@ -268,7 +237,7 @@
       margin-top: 40px;
     }
 
-    .warning-container {
+    .reminder-container {
       width: 70px;
       height: 70px;
       background-color: #34D399;
@@ -280,22 +249,22 @@
       box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .warning-icon {
+    .reminder-icon {
       width: 40px;
       height: 40px;
       object-fit: contain;
       display: block;
     }
 
-    .emergency-buttons {
+    .reminder-buttons {
       display: flex;
       justify-content: center;
       gap: 15px;
       margin-top: 20px;
     }
 
-    .btn-contact,
-    .btn-center {
+    .btn-projects,
+    .btn-resume {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -311,13 +280,13 @@
       box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .btn-contact:hover,
-    .btn-center:hover {
+    .btn-projects:hover,
+    .btn-resume:hover {
       background: #f97316;
     }
 
     @media (max-width: 768px) {
-      .news-container {
+      .home-container {
         flex-direction: column;
         align-items: center;
       }
@@ -328,13 +297,13 @@
     }
 
     @media (max-width: 1100px) {
-      .info-boxes {
+      .skill-boxes {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 600px) {
-      .info-boxes {
+      .skill-boxes {
         grid-template-columns: 1fr;
       }
     }
