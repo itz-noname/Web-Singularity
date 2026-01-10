@@ -1,0 +1,120 @@
+    main {
+      min-height: 70vh;
+    }
+
+    .faq-wrapper {
+      max-width: 700px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+
+    .faq-wrapper h1 {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .faq-subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #6b6b6b;
+      margin-bottom: 35px;
+    }
+
+    .faq-section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0060ff;
+      margin: 28px 0 12px;
+    }
+
+    .faq-item {
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-input {
+      display: none;
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 14px 16px;
+      background: #fff;
+      text-align: left;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      position: relative;
+      font-weight: 500;
+      transition: background 0.3s, color 0.3s;
+      display: block;
+    }
+
+    .faq-question::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid #444;
+      border-bottom: 2px solid #444;
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      transition: 0.3s;
+    }
+
+
+    .faq-input:checked+.faq-question::after {
+      transform: translateY(-50%) rotate(225deg);
+    }
+
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      background: #fafafa;
+      padding: 0 18px;
+      border-top: 1px solid transparent;
+      font-size: 13px;
+      color: #444;
+      transition: max-height 0.5s ease-in-out, border-top 0.5s;
+    }
+
+    /* Content wrapper for consistent padding when open */
+    .faq-answer-content {
+      padding: 15px 0;
+    }
+
+    /* Expanded State: When checkbox is checked */
+    .faq-input:checked+.faq-question+.faq-answer {
+      max-height: 500px;
+      /* Sufficient height to show content */
+      border-top: 1px solid #e5e5e5;
+    }
+
+
+    .list-style {
+      margin-left: 20px;
+    }
+
+    .footer-box {
+      margin-top: 60px;
+      padding: 20px;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      background: #fafafa;
+      font-size: 13px;
+      color: #444;
+      line-height: 22px;
+    }
+
+    .contact-icon {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      object-fit: contain;
+    }
